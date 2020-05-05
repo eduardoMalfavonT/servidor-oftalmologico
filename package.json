@@ -1,0 +1,19 @@
+{
+  "name": "servidor-oftalmologico",
+  "version": "1.0.0",
+  "description": "servidor que proveera de informacion a la pagina web oftalmologica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Metoosky00/servidor-oftalmologico.git"
+  },
+  "author": "Eduardo Malfavón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Metoosky00/servidor-oftalmologico/issues"
+  },
+  "homepage": "https://github.com/Metoosky00/servidor-oftalmologico#readme"
+}
