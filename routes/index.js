@@ -19,11 +19,7 @@ module.exports = function () {
   router.delete("/cliente/:idCliente", clienteController.eliminarCliente);
   /*-------------------------------------------------Rutas para productos----------------------------------------------- */
   //Crear nuevo producto
-  router.post(
-    "/producto/nuevoProducto",
-    productoController.subirArchivo,
-    productoController.nuevoProducto
-  );
+router.post('/producto/nuevoProducto',productoController.subirArchivo,productoController.nuevoProducto)
   //Mostrar todos los productos
   router.get("/productos", productoController.mostrarProductos);
   //Mostrar un solo producto

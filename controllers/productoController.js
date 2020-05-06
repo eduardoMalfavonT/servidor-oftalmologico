@@ -32,7 +32,7 @@ exports.subirArchivo = (req, res, next) => {
   });
 };
 //Nuevo producto
-exports.nuevoPoducto = async (req, res, next) => {
+exports.nuevoProducto = async (req, res, next) => {
     const producto = new Productos(req.body);
     try {
       if (req.file.filename) {
