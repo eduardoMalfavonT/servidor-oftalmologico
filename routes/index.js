@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const clienteController= require('../controllers/clienteController');
-const productoController= require('../controllers/productoController');
-const ventasController= require('../controllers/ventasController');
+const clienteController = require("../controllers/clienteController");
+const productoController = require("../controllers/productoController");
+const ventasController = require("../controllers/ventasController");
 
 module.exports = function () {
   /*-----------------------------------------------------------Rutas-------------------------------------------------------- */
@@ -19,13 +19,21 @@ module.exports = function () {
   router.delete("/cliente/:idCliente", clienteController.eliminarCliente);
   /*-------------------------------------------------Rutas para productos----------------------------------------------- */
   //Crear nuevo producto
-  router.post("/producto/nuevoProducto", productoController.nuevoProducto);
+  router.post(
+    "/producto/nuevoProducto",
+    productoController.subirArchivo,
+    productoController.nuevoProducto
+  );
   //Mostrar todos los productos
   router.get("/productos", productoController.mostrarProductos);
   //Mostrar un solo producto
   router.get("/producto/:idProducto", productoController.mostrarProducto);
   //Actualizar un producto
-  router.put("/producto/:idProducto", productoController.actualizarProducto);
+  router.put(
+    "/producto/:idProducto",
+    productoController.subirArchivo,
+    productoController.actualizarProducto
+  );
   //Eliminar un producto
   router.delete("/producto/:idProducto", productoController.eliminarProducto);
   /*---------------------------------------------------Rutas para ventas--------------------------------------------------*/
@@ -34,10 +42,10 @@ module.exports = function () {
   //Mostrar todas las ventas
   router.get("/ventas", ventasController.mostrarVentas);
   //Mostrar una venta
-  router.get("/venta/idVenta", ventasController.mostrarVenta);
+  router.get("/venta/:idVenta", ventasController.mostrarVenta);
   //Actualizar una venta
-  router.put("/venta/idVenta", ventasController.actualizarVenta);
+  router.put("/venta/:idVenta", ventasController.actualizarVenta);
   //Eliminar una venta
-  router.delete("/venta/idVenta", ventasController.eliminarVenta);
+  router.delete("/venta/:idVenta", ventasController.eliminarVenta);
   return router;
 };
