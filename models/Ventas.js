@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ventasSchema = new Schema({
-  usuario: { type: Schema.ObjectId, ref: "Clientes" },
+  cliente: { type: Schema.ObjectId, ref: "Clientes" },
   carrito: [
     {
       producto: [{ type: Schema.ObjectId, ref: "Productos" }],

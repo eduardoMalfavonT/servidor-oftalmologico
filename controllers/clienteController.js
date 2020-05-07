@@ -27,7 +27,7 @@ exports.mostrarClientes = async (req, res, next) => {
 //Mostrar un solo cliente
 exports.mostrarCliente = async (req, res, next) => {
   try {
-    const cliente = await Cliente.findById(req.params.idCliente, {
+    const cliente = await Clientes.findById(req.params.idCliente, {
       password: 0,
     });
     if (!cliente) {
